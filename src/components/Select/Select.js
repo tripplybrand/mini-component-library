@@ -44,6 +44,14 @@ padding: 12px 16px;
 background-color: ${COLORS.transparentGray15};
 padding-right: 52px;
 border-radius: 8px;
+
+${NativeSelect}:focus + &{
+  outline: 1px dotted #212121;
+  outline: 5px auto -webkit-focus-ring-color;
+};
+${NativeSelect}:hover + &{
+  color: ${COLORS.black};
+};
 `
 
 const IconWrapper = styled.div`
@@ -53,7 +61,8 @@ bottom: 0;
 right: 10px;
 margin: auto;
 width: var(--size);
-height: var(--size)
+height: var(--size);
+pointer-events: none;
 `
 
 export default Select;
